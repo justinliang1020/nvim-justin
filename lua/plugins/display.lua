@@ -16,4 +16,12 @@ return {
       background_colour = "#000000",
     },
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      window = {
+        position = "right",
+      },
+    },
+  },
 }
