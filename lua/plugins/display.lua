@@ -29,6 +29,8 @@ return {
 /\ \_\ \/___/  \/___/   \/__/ \/_/\/_/\/_/
 \ \____/                                  
  \/___/
+
+@justinliang1020
       ]]
       opts.section.header.val = vim.split(logo, "\n", { trimempty = true })
     end,
