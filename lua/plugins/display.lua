@@ -2,7 +2,7 @@ return {
   {
     "folke/tokyonight.nvim",
     opts = {
-      colorscheme = "gruvbox",
+      -- colorscheme = "gruvbox",
       transparent = "true",
       styles = {
         sidebars = "transparent",
@@ -22,6 +22,17 @@ return {
       window = {
         position = "right",
       },
+    },
+  },
+  {
+    "f-person/auto-dark-mode.nvim",
+    opts = {
+      set_dark_mode = function()
+        vim.cmd("colorscheme tokyonight")
+      end,
+      set_light_mode = function()
+        vim.cmd("colorscheme tokyonight-day")
+      end,
     },
   },
 }
