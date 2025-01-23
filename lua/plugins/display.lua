@@ -42,4 +42,16 @@ return {
       },
     },
   },
+  {
+    "folke/which-key.nvim",
+    opts = {
+      preset = "classic",
+      win = {
+        col = 0.5,
+        width = 300,
+        height = 8,
+        no_overlap = false,
+      },
+    },
+  },
 }
