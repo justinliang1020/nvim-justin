@@ -1,9 +1,20 @@
 return {
   -- START display
   {
-    "folke/tokyonight.nvim",
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    config = function()
+      require("gruvbox").setup({
+        terminal_colors = true,
+        transparent_mode = true,
+      })
+    end,
+  },
+  -- Configure LazyVim to load gruvbox
+  {
+    "LazyVim/LazyVim",
     opts = {
-      transparent = "true",
+      colorscheme = "gruvbox",
     },
   },
   {
@@ -24,10 +35,12 @@ return {
     "f-person/auto-dark-mode.nvim",
     opts = {
       set_dark_mode = function()
-        vim.cmd("colorscheme tokyonight")
+        vim.o.background = "dark"
+        vim.cmd("colorscheme gruvbox")
       end,
       set_light_mode = function()
-        vim.cmd("colorscheme tokyonight-day")
+        vim.o.background = "light"
+        vim.cmd("colorscheme gruvbox")
       end,
     },
   },
